@@ -1,62 +1,11 @@
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+# solace-spring-leader-election-example
 
-# template_repo README
+Just a quick example to demonstrate usage of [https://github.com/solacecommunity/spring-solace-leader-election](https://github.com/solacecommunity/spring-solace-leader-election)
 
-## What does this demonstrate?
-Please specify what is this demo about ...
+## How to Run
+Start two instances! 
 
-### Cloud Services Used
-List of cloud services uses in this demo if any ...
+`mvn spring-boot:run` 
 
-  
-### Solace PubSub+ features used
-List of PubSub+ features used ...
-
-**Try the live demo in action here:
-http://london.solace.com/cloud-analytics/machine-learning.html**
-
-### Other Useful Links
-List of links to useful resources ...
-
-
-## Contents
-
-What does this repostiory contain ...
-
-
-## Checking out
-
-To check out the project, clone this GitHub repository:
-
-```
-git clone https://github.com/solacese/github-demo
-cd <github-demo>
-```
-
-## Running the Demo
-
-To run the demo open:
-
-```
-commands to run the demo go here ...
-```
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Authors
-
-See the list of [contributors](https://github.com/solacese/<github-repo>/graphs/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the Apache License, Version 2.0. - See the [LICENSE](LICENSE) file for details.
-
-## Resources
-
-For more information try these resources:
-
-- The Solace Developer Portal website at: https://solace.dev
-- Ask the [Solace Community](https://solace.community)
-
+You should see the first instance printing that it's the leader every 3 seconds. If you stop it you'll see the second one takes over :) 
+By default this will try to connect to a local solace broker using the `default` username and vpn. 

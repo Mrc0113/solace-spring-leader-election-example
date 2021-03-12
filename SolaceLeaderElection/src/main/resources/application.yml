@@ -1,0 +1,5 @@
+spring:
+  leader:
+    join-groups:
+      - groupName: leaderGroupName
+        joinType: ON_READINESS
